@@ -1,0 +1,20 @@
+{
+  "name": "medical-policy-analysis",
+  "interface": {
+    "displayName": "医疗政策分析插件"
+  },
+  "plugins": [
+    {
+      "name": "medical-policy-analysis",
+      "source": {
+        "source": "local",
+        "path": "./plugins/medical-policy-analysis"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "SkillHub"
+    }
+  ]
+}

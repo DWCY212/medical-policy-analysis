@@ -1,0 +1,14 @@
+# Local Codex state and caches
+.codex/
+policy-analysis/
+**/policy-analysis-state.json
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
