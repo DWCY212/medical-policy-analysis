@@ -12,3 +12,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
+
+# Local release archives
+release/
