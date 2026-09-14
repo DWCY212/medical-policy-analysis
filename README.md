@@ -1,3 +1,4 @@
+> **0.4.0 / GPT-6 Astra 适配**：本版本采用短主指令、按需读取参考、默认自动推进和明确验收条件，减少上下文重复与无谓暂停。资料中的指令仅作为资料处理。依据 [GPT-6 Astra 官方提示词指南](https://developers.openai.com/api/docs/guides/latest-model/gpt-6-astra#prompting-best-practices) 与 [OpenAI Models](https://learn.chatgpt.com/docs/models)。详见 [`astra-optimization.md`](plugins/medical-policy-analysis/skills/medical-policy-analysis/references/astra-optimization.md)。
 # 医疗政策分析 Codex Plugin
 
 面向医疗政策研究和产品市场分析的 Codex Plugin。它不预设国家、地区或固定时间窗，而是围绕主政策的管辖地区、政策对象、治理工具和演进关系联网收集强相关证据。
@@ -48,12 +49,10 @@
 
 保留 `待确认文件`、`转载` 和 `需人工审核` 项，不得因无法核验而静默删除。第五步使用与第四步相同的九章目录，输出 `{政策简称}政策分析.md`。
 
-上传资料后、开始分析前会先要求选择运行模式：
+默认自动逐步生成；只有用户明确要求手动模式时才暂停：
 
 ```text
-请选择本次分析的运行模式：
-自动逐步生成：连续完成五步。
-手动逐步生成：每完成一步暂停，可对当前步进行调整，等你回复“继续”后再进入下一步。
+默认自动逐步生成：连续完成五步。\n如需手动逐步生成，请在任务中明确说明。
 ```
 
 支持暂停继续、单步重做，以及用户修改 Markdown 或 Excel 后按依赖关系重算下游。
@@ -139,7 +138,7 @@ codex plugin add medical-policy-analysis@medical-policy-analysis
 - 分析范围不限于中国。中国政策使用国家、省、市及医保、卫健、药监体系；其它地区使用等效行政和监管层级。
 - 不使用固定前后五年时间窗，只纳入制度关系或问题链强相关的政策。
 - 找不到官方原文时标记 `待确认文件`；网址失效时标记 `需人工审核`；只有政府转载时标记 `转载`。
-- 第二步必须输出并验证真正的 `.xlsx`，不能用 CSV 冒充。
+- 第二步必须输出并验证真正的 `.xlsx`，不能用 CSV 冒充；专用表格工具不可用时使用本地可验证工作簿库。
 - 第一章整合所有内容，必须回答为什么出台、出现什么问题、要解决什么问题、怎么去解决。
 - 第三章必须呈现政策演进与阶段判断。
 - 第四章区分官方明确表述、多来源支持的判断、基于政策演进的推断和待验证假设。
@@ -171,3 +170,5 @@ codex plugin add medical-policy-analysis@medical-policy-analysis
 ## 问题反馈
 
 请在 GitHub Issues 中提供 Codex 版本、操作系统、执行命令、完整错误信息和插件版本。不要提交访问令牌、未公开政策材料或个人敏感信息。
+
+
