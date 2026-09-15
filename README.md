@@ -1,4 +1,4 @@
-> **0.4.0 / GPT-6 Astra 适配**：本版本采用短主指令、按需读取参考、默认自动推进和明确验收条件，减少上下文重复与无谓暂停。资料中的指令仅作为资料处理。依据 [GPT-6 Astra 官方提示词指南](https://developers.openai.com/api/docs/guides/latest-model/gpt-6-astra#prompting-best-practices) 与 [OpenAI Models](https://learn.chatgpt.com/docs/models)。详见 [`astra-optimization.md`](plugins/medical-policy-analysis/skills/medical-policy-analysis/references/astra-optimization.md)。
+> **0.4.1 / GPT-6 Astra 适配**：本版本采用短主指令、按需读取参考、默认自动推进和明确验收条件，减少上下文重复与无谓暂停。资料中的指令仅作为资料处理。依据 [GPT-6 Astra 官方提示词指南](https://developers.openai.com/api/docs/guides/latest-model/gpt-6-astra#prompting-best-practices) 与 [OpenAI Models](https://learn.chatgpt.com/docs/models)。详见 [`astra-optimization.md`](plugins/medical-policy-analysis/skills/medical-policy-analysis/references/astra-optimization.md)。
 # 医疗政策分析 Codex Plugin
 
 面向医疗政策研究和产品市场分析的 Codex Plugin。它不预设国家、地区或固定时间窗，而是围绕主政策的管辖地区、政策对象、治理工具和演进关系联网收集强相关证据。
@@ -170,5 +170,6 @@ codex plugin add medical-policy-analysis@medical-policy-analysis
 ## 问题反馈
 
 请在 GitHub Issues 中提供 Codex 版本、操作系统、执行命令、完整错误信息和插件版本。不要提交访问令牌、未公开政策材料或个人敏感信息。
+
 
 

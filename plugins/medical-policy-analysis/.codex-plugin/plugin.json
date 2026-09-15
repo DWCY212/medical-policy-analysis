@@ -1,6 +1,6 @@
 {
   "name": "medical-policy-analysis",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "面向 GPT-6 Astra 的低冗余五步医疗政策研究插件：官方核验、相关政策 Excel、演进分析与产品市场报告。",
   "author": {
     "name": "DWCY212"
@@ -35,3 +35,4 @@
     "brandColor": "#0F766E"
   }
 }
+
